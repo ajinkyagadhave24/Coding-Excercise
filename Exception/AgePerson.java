@@ -4,6 +4,19 @@ public class AgePerson {
 	private String ename;
 	private int age;
 	
+	public String getEname() {
+		return ename;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
 	public AgePerson(String ename, int age) {
 		this.ename = ename;
 		this.age = age;
@@ -16,14 +29,17 @@ public class AgePerson {
 			System.out.println("Registration successful...");
 	}
 	public static void main(String args[]) {
-		AppBank b1= new AppBank("Rohan",22);
-		AppBank b2= new AppBank("Ajinkya",12);
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter NAME ,AGE: ");
+		String name=sc.next();
+		int age=sc.nextInt();
+		
+		Appbank b1= new AppBank(name,age);
 		try
 		{
 			b1.verify();
-			b2.verify();
 		}
-		catch(AgeExceptionBank e)
+		catch(BankAgeExcept e)
 		{
 			System.out.println(e);
 		}
