@@ -1,5 +1,7 @@
 package Exception;
 
+import java.util.Scanner;
+
 public class ValidEmp {
 	private String fname;
 	private String lname;
