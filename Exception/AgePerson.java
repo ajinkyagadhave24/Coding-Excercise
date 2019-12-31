@@ -1,5 +1,7 @@
 package Exception;
 
+import java.util.Scanner;
+
 public class AgePerson {
 	private String ename;
 	private int age;
@@ -34,12 +36,12 @@ public class AgePerson {
 		String name=sc.next();
 		int age=sc.nextInt();
 		
-		Appbank b1= new AppBank(name,age);
+		AppBank b1= new AppBank(name,age);
 		try
 		{
 			b1.verify();
 		}
-		catch(BankAgeExcept e)
+		catch(AgeExceptionBank e)
 		{
 			System.out.println(e);
 		}
